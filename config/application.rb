@@ -1,5 +1,8 @@
+require_relative 'boot'
+require 'rails/all'
+Bundler.require(*Rails.groups)
 
-moudule ChatSpace
+module ChatSpace
   class Application < Rails::Application
     config.generators do |g|
       g.stylesheets false
