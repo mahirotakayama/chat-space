@@ -1,13 +1,13 @@
 .wrapper
  
- = render 'shared/side_bar'
+  = render 'shared/side_bar'
 
- .chat
-   .header
-     .left-header
-       .left-header__title
-         グループ名
-        %ul.left-header__title
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
           Member:
           %li.member
             メンバー名
@@ -16,7 +16,7 @@
           %li.member
             メンバー名
       .right-header
-        .right-header__bottom
+        .right-header__button
           Edit
     .messages
       .message
@@ -25,7 +25,7 @@
             メンバー
           .upper-message__date
             2017/04/04
-        .lower-message
+        .lower-meesage
           .lower-message__content
             メッセージ
       .message
@@ -34,7 +34,7 @@
             メンバー
           .upper-messsage__date
             2017/04/04
-        .lower-messsage
+        .lower-meesage
           .lower-message__content
             メッセージ
       .message
@@ -43,7 +43,7 @@
             メンバー
           .uppper-message__date
             2017/04/04
-        .lower-message
+        .lower-meesage
           .lower-message__content
             メッセージ
     .form
@@ -54,7 +54,3 @@
             = icon('fa','image',class: 'icon')
             %input.hidden{type: 'file'}
         %input.form__submit{type: 'submit', value: 'Send'}
-
-       
-  = render "side_bar"
-  = render "main_chat"
