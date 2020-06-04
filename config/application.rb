@@ -5,7 +5,7 @@ Bundler.require(*Rails.groups)
 module ChatSpace
   class Application < Rails::Application
     config.generators do |g|
-    confug.i18n.default_locale = :ja
+    config.i18n.default_locale = :ja
       g.stylesheets false
       g.javascripts false
       g.helper false
