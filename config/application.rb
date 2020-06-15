@@ -7,10 +7,6 @@ module ChatSpace
 
     config.time_zone = 'Tokyo'
 
-
-
-
-    
     config.generators do |g|
     config.i18n.default_locale = :ja
       g.stylesheets false
