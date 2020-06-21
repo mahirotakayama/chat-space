@@ -1,5 +1,5 @@
 .chat {
-  width: calc(100% -300px);
+  width: calc(100% - 300px);
   .header {
     box-sizing: border-box;
     height: 100px;
@@ -36,8 +36,8 @@
   .messages {
     background-color: #FAFAFA;
     box-sizing: border-box;
-    padding: 46px 40px 0;
-    height: calc(100vh -100px -90px);
+    padding: 46px 40px;
+    height: calc(100vh - 100px - 90px);
     overflow: scroll;
     .messsage {
       .upper-message {
@@ -68,12 +68,13 @@
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
+    width: calc(100vw - 100px);
     padding: 20px 50px 20px 40px;
     &__message {
       border: none;
       float:left;
       height: 50px;
-      width: calc(100%-150px);
+      width: calc(100% - 150px);
     }
     &__mask {
       background-color: $white;
