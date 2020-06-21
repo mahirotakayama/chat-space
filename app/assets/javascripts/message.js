@@ -1,6 +1,4 @@
 $(function(){
-  var last_message_id = $('.message:last').data("message-id");
-  console.log(last_message_id);
   var reloadMessages = function() {
 
     var last_message_id = $('.message:last').data("message-id");
