@@ -5,6 +5,6 @@ class Api::MessagesController < ApplicationController
 
     last_message_id = params[:id].to_i
 
-    @messages = group.messages.includes(:usser).where("id > ?", last_message_id)
+    @messages = group.messages.includes(:user).where("id > ?", last_message_id)
   end
 end

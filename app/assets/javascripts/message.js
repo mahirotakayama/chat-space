@@ -1,4 +1,6 @@
 $(function(){
+
+
   var reloadMessages = function() {
 
     var last_message_id = $('.message:last').data("message-id");
@@ -11,7 +13,7 @@ $(function(){
 
       data: {id: last_message_id}
     })
-    .done(function(messages){
+    .done(function(messages) {
       if (messages.length !== 0) {
 
         var insertHTML ='';
