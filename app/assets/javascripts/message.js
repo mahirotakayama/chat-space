@@ -1,21 +1,16 @@
 $(function(){
-
-
   var reloadMessages = function() {
-
     var last_message_id = $('.message:last').data("message-id");
+    console.log(last_message_id)
     $.ajax({
-
       url: "api/messages",
-
       type: 'get',
       dataType: 'json',
-
       data: {id: last_message_id}
     })
     .done(function(messages) {
+      console.log("aaa")
       if (messages.length !== 0) {
-
         var insertHTML ='';
 
         $.each(messages,function(i, message) {
@@ -26,10 +21,13 @@ $(function(){
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       }
     })
+    
     .fail(function() {
       alert('error');
     });
   };
+  setInterval(reloadMessages, 7000);
+
      function buildHTML(message){
       if ( message.image ) {
         var html =
@@ -52,7 +50,7 @@ $(function(){
         return html;
       } else {
         var html =
-         `<div class="message">
+         `<div class="message" data-message-id=${message.id}>
             <div class="upper-message">
               <div class="upper-message__user-name">
                 ${message.user_name}
@@ -71,6 +69,7 @@ $(function(){
       };
     }
   $('#new_message').on('submit', function(e){
+
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
